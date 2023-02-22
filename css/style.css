@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+h1, h2, #btn-div {
+    text-align: center;
+}
+
+body {
+    background-color: lightcoral;
+}
+
+.bg-white {
+    background-color: white;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: .9375rem;
+}
+
+.flex {
+    display:flex ;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+#section-form .flex div {
+    width: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: .3125rem;
+}
+
+#btn-div {
+    margin-top: 30px;
+}
+
+#btn-div button {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+#dettagli-passeggero {
+    width: 30%;
+}
+
+#dati-biglietto {
+    width: 70%;
+}
+
+#my-ticket div.flex {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+table th, table td {
+    width: 25%;
+    text-align: start;
+}
