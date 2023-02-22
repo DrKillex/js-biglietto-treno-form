@@ -1,30 +1,31 @@
 "use strict";
 
-const submitBtn = document.getElementById('submit');
 
-const priceKm = 0.21;
+const submitBtn = document.getElementById('submit'); //seleziona bottone genera
 
-const under18 = 0.2;
+const priceKm = 0.21; //variabile prezzo al km
 
-const over65 = 0.4;
+const under18 = 0.2; //variabile sconto under18
 
-const ticketType = document.getElementById('ticket-type')
+const over65 = 0.4; //variabile sconto over65
 
-const myTicketSection = document.getElementById('my-ticket')
+const ticketType = document.getElementById('ticket-type'); //seleziona dove stampare il tipo di sconto
 
-const resetBtn = document.getElementById('reset');
+const myTicketSection = document.getElementById('my-ticket'); //seleziona la sezione my-ticket
 
-const finalPrice = document.getElementById('final-price');
+const resetBtn = document.getElementById('reset'); //seleziona bottone annulla
 
-const nomePassegggero = document.getElementById('nome-passeggero');
+const finalPrice = document.getElementById('final-price'); //seleziona dove stampare il prezzo finale
 
-let nameUser ;
+const nomePassegggero = document.getElementById('nome-passeggero'); //seleziona dove stampare il nome del passeggero
 
-let numKm ;
+let nameUser ; //variabile nome passeggero
 
-let age ;
+let numKm ; //variabile numero km scelti
 
-let ticketPrice;
+let age ; //variabile selettore fascia d eta
+
+let ticketPrice; //variabile costo biglietto
 
 submitBtn.addEventListener('click',
 

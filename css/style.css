@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* common */
+
 h1, h2 {
     margin: 20px 0;
     color: white;
@@ -39,8 +41,14 @@ body {
     justify-content: space-around;
 }
 
+/* section form */
+
 #section-form .flex div {
     width: auto;
+}
+
+#section-form .bg-white {
+    border-radius: 10px;
 }
 
 label {
@@ -66,6 +74,8 @@ label {
 #btn-div button:first-child {
     border-color: orange;
 }
+
+/* my section */
 
 #dettagli-passeggero {
     width: 30%;
