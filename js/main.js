@@ -17,27 +17,19 @@ const resetBtn = document.getElementById('reset'); //seleziona bottone annulla
 
 const finalPrice = document.getElementById('final-price'); //seleziona dove stampare il prezzo finale
 
-const nomePassegggero = document.getElementById('nome-passeggero'); //seleziona dove stampare il nome del passeggero
-
-let nameUser ; //variabile nome passeggero
-
-let numKm ; //variabile numero km scelti
-
-let age ; //variabile selettore fascia d eta
-
-let ticketPrice; //variabile costo biglietto
+const nomePasseggero = document.getElementById('nome-passeggero'); //seleziona dove stampare il nome del passeggero
 
 submitBtn.addEventListener('click',
 
 function() {
 
-    nameUser = document.getElementById('name').value;
+    let nameUser = document.getElementById('name').value;
 
-    numKm = Number(document.getElementById('km').value);
+    let numKm = Number(document.getElementById('km').value);
 
-    age = Number(document.getElementById('eta').value);
+    let age = document.getElementById('eta').value;
 
-    ticketPrice=(numKm * priceKm);
+    let ticketPrice=(numKm * priceKm);
     
     if (age < 18){
 
@@ -55,17 +47,22 @@ function() {
 
         ticketType.innerHTML = "Biglietto Standard"
 
-    }
-    
-    console.log({numKm});
+    };
 
-    console.log({age});
-
-    nomePassegggero.innerHTML = nameUser
+    nomePasseggero.innerHTML = nameUser;
 
     finalPrice.innerHTML = Number(ticketPrice).toFixed(2);
 
-    myTicketSection.classList.remove('d-none')
+    if (numKm !== 0 && age !== '' && nameUser !==''){
+
+        myTicketSection.classList.remove('d-none');
+        
+    } else {
+
+        alert('devi riempire tutti i campi');
+
+    }
+
 }
 );
 
