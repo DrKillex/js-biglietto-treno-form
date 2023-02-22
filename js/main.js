@@ -10,6 +10,14 @@ const over65 = 0.4;
 
 const ticketType = document.getElementById('ticket-type')
 
+const myTicketSection = document.getElementById('my-ticket')
+
+const resetBtn = document.getElementById('reset');
+
+const finalPrice = document.getElementById('final-price');
+
+const nomePassegggero = document.getElementById('nome-passeggero');
+
 let nameUser ;
 
 let numKm ;
@@ -52,12 +60,20 @@ function() {
 
     console.log({age});
 
-    document.getElementById('nome-passeggero').innerHTML = nameUser
+    nomePassegggero.innerHTML = nameUser
 
-    document.getElementById('final-price').innerHTML = Number(ticketPrice).toFixed(2);
+    finalPrice.innerHTML = Number(ticketPrice).toFixed(2);
 
+    myTicketSection.classList.remove('d-none')
 }
 );
 
+resetBtn.addEventListener('click',
 
+function() {
+
+    myTicketSection.classList.add('d-none')
+
+}
+);
 
