@@ -1,36 +1,48 @@
 'use strict'
 
-//step 1
 
-const priceKm = 0,21;
+const submitBtn = document.getElementById('submit')
 
-//step 2
+const priceKm = 0.21;
 
-const under18 = 0,2;
+const under18 = 0.2;
 
-//step 3
-const over65 = 0,4
+const over65 = 0.4;
 
-//step 4
+let numKm ;
 
-const numKM = 
+let age ;
 
-//step 5
+let ticketPrice;
 
-const age = 
+submitBtn.addEventListener('click',
 
-//step 6
+function() {
 
-let ticketPrice = (numKM * priceKm);
+    numKm = Number(document.getElementById('km').value);
 
-//step 7
+    age = Number(document.getElementById('eta').value);
 
-if (age < 18){
+    ticketPrice=(numKm * priceKm);
+    
+    if (age < 18){
 
+        ticketPrice -= ticketPrice * under18
 
-} else if (age >= 65){
+    } else if (age >= 65){
 
+        ticketPrice -= ticketPrice * over65
+
+    };
+
+    console.log({numKm});
+
+    console.log({age});
+
+    document.getElementById('test').innerHTML = Number(ticketPrice).toFixed(2);
 
 }
+);
 
-//step 8
+
+
