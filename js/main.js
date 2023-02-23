@@ -19,41 +19,47 @@ const finalPrice = document.getElementById('final-price'); //seleziona dove stam
 
 const nomePasseggero = document.getElementById('nome-passeggero'); //seleziona dove stampare il nome del passeggero
 
+const nameUser = document.getElementById('name');
+
+const numKm = document.getElementById('km');
+
+const age = document.getElementById('eta');
+
 submitBtn.addEventListener('click',
 
 function() {
 
-    let nameUser = document.getElementById('name').value;
+    const inputNameUser = nameUser.value;
 
-    let numKm = Number(document.getElementById('km').value);
+    const inputNumKm = numKm.value;
 
-    let age = document.getElementById('eta').value;
+    const inputAge = age.value;
 
-    let ticketPrice=(numKm * priceKm);
+    let ticketPrice=(inputNumKm * priceKm);
     
-    if (age < 18){
+    if (inputAge < 18){
 
-        ticketPrice -= ticketPrice * under18
+        ticketPrice -= ticketPrice * under18;
 
-        ticketType.innerHTML = "Sconto Under18"
+        ticketType.innerHTML = "Sconto Under18";
 
-    } else if (age >= 65){
+    } else if (inputAge >= 65){
 
-        ticketPrice -= ticketPrice * over65
+        ticketPrice -= ticketPrice * over65;
 
-        ticketType.innerHTML = "Sconto Over65"
+        ticketType.innerHTML = "Sconto Over65";
 
     } else {
 
-        ticketType.innerHTML = "Biglietto Standard"
+        ticketType.innerHTML = "Biglietto Standard";
 
     };
 
-    nomePasseggero.innerHTML = nameUser;
+    nomePasseggero.innerHTML = inputNameUser;
 
-    finalPrice.innerHTML = Number(ticketPrice).toFixed(2);
+    finalPrice.innerHTML = ticketPrice.toFixed(2);
 
-    if (numKm !== 0 && age !== '' && nameUser !==''){
+    if (inputNumKm > 0 && inputAge !== '' && inputNameUser !==''){
 
         myTicketSection.classList.remove('d-none');
         
