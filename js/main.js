@@ -65,7 +65,7 @@ function() {
         
     } else {
 
-        alert('devi riempire tutti i campi');
+        alert('devi riempire tutti i campi correttamente');
 
     }
 
